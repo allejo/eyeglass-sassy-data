@@ -13,7 +13,7 @@ $sd-default-encoding: 'utf8' !default;
 ///
 /// @return {String}
 @function read-file($filePath, $encoding: $sd-default-encoding) {
-    @return sd-file-path($filePath, $encoding);
+    @return sd-read-file($filePath, $encoding);
 }
 
 /// Parse a JSON string to a Sass map
