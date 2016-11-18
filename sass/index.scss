@@ -1,0 +1,40 @@
+/// Import a JSON file to a Sass map
+///
+/// @access public
+///
+/// @param  {String} $filePath - The path to a JSON file; this path is relative to the file this function is called from
+/// @param  {String} $encoding [utf8] - The encoding of the JSON file
+///
+/// @since  0.1.0
+///
+/// @return {Map} The map equivalent of the JSON file
+@function import-from-json($filePath, $encoding: 'utf8') {
+    @return sd-import-from-json($filePath, $encoding);
+}
+
+/// Import a JSON file to a Sass map
+///
+/// @access public
+///
+/// @param  {String} $filePath - The path to a YAML file; this path is relative to the file this function is called from
+/// @param  {String} $encoding [utf8] - The encoding of the YAML file
+///
+/// @since  0.1.0
+///
+/// @return {Map} The map equivalent of the YAML file
+@function import-from-yaml($filePath, $encoding: 'utf8') {
+    @return sd-import-from-yaml($filePath, $encoding);
+}
+
+/// Parse JSON to a Sass map
+///
+/// @access public
+///
+/// @param  {String} $json - A string representation of JSON data
+///
+/// @since  0.1.0
+///
+/// @return {Map} The map equivalent of the JSON file
+@function read-json($json) {
+    @return sd-read-json($json);
+}

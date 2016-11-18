@@ -1,18 +1,18 @@
 {
-  "name": "data-to-sass",
+  "name": "eyeglass-sassy-data",
   "keywords": [
     "eyeglass-module",
     "sass"
   ],
   "main": "eyeglass-exports.js",
   "eyeglass": {
+    "name": "sassy-data",
     "exports": "eyeglass-exports.js",
     "needs": "^1.1.2"
   },
   "dependencies": {
     "eol": "^0.4.0",
     "js-yaml": "^3.7.0",
-    "node-sass": "^3.13.0",
     "node-sass-utils": "^1.1.2"
   }
 }
