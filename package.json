@@ -1,5 +1,6 @@
 {
   "name": "eyeglass-sassy-data",
+  "license": "MIT",
   "keywords": [
     "eyeglass-module",
     "sass"
