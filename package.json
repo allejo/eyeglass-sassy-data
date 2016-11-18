@@ -1,6 +1,16 @@
 {
   "name": "eyeglass-sassy-data",
+  "author": "Vladimir Jimenez",
   "license": "MIT",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allejo/eyeglass-sassy-data"
+  },
+  "bugs": {
+    "url": "https://github.com/allejo/eyeglass-sassy-data/issues"
+  },
+  "homepage": "https://github.com/allejo/eyeglass-sassy-data",
   "keywords": [
     "eyeglass-module",
     "sass"
@@ -15,6 +25,5 @@
     "eol": "^0.4.0",
     "js-yaml": "^3.7.0",
     "node-sass-utils": "^1.1.2"
-  },
-  "version": "0.0.0"
+  }
 }

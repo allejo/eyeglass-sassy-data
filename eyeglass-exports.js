@@ -11,35 +11,31 @@ module.exports = function(eyeglass, sass) {
     return {
         sassDir: path.join(__dirname, '..', 'sass'),
         functions: {
-            "sd-import-from-json($filePath, $encoding: 'utf8')": function($filePath, $encoding, done) {
+            "sd-read-file($filePath, $encoding: 'utf8')": function ($filePath, $encoding, done) {
                 fs.readFile($filePath.getValue(), $encoding.getValue(), function (err, data) {
                     if (err) {
                         done(sass.types.Error("File read error: \'" + err.toString() + "\'."));
                         return;
                     }
 
-                    var pData = JSON.parse(eol.auto(data));
-                    done(sassUtils.castToSass(pData));
+                    done(sass.types.String(eol.auto(data)));
                 });
             },
-            "sd-read-json($json)": function ($json, done) {
+            "sd-json-to-map($jsonAsString)": function ($jsonAsString, done) {
                 try {
-                    var data = JSON.parse($json.getValue());
+                    var data = JSON.parse($jsonAsString.getValue());
                     done(sassUtils.castToSass(data));
                 } catch (e) {
-                    done(sass.types.Error("JSON parsing error: " + e));
+                    done(sass.types.Error("JSON parsing error: " + e.toString()));
                 }
             },
-            "sd-import-from-yaml($filePath, $encoding: 'utf8')": function ($filePath, $encoding, done) {
-                fs.readFile($filePath.getValue(), $encoding.getValue(), function (err, data) {
-                    if (err) {
-                        done(sass.types.Error("File read error: \'" + err.toString() + "\'."));
-                        return;
-                    }
-
-                    var pData = yaml.safeLoad(eol.auto(data));
+            "sd-yaml-to-map($yamlAsString)": function ($yamlAsString, done) {
+                try {
+                    var pData = yaml.safeLoad($yamlAsString.getValue());
                     done(sassUtils.castToSass(pData));
-                });
+                } catch (e) {
+                    done(sass.types.Error("YAML parsing error: " + e.toString()));
+                }
             }
         }
     };
