@@ -25,5 +25,10 @@
     "eol": "^0.4.0",
     "js-yaml": "^3.7.0",
     "node-sass-utils": "^1.1.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "pump": "^1.0.1",
+    "sassdoc": "^2.1.20"
   }
 }
