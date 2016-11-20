@@ -1,5 +1,7 @@
 # Sassy Data
 
+[![npm](https://img.shields.io/npm/v/eyeglass-sassy-data.svg)](https://www.npmjs.com/package/eyeglass-sassy-data)
+
 Sassy Data is an [eyeglass](https://github.com/sass-eyeglass/eyeglass) module which introduces functionality to import data from supported data formats to Sass maps or arrays. Currently, the supported data formats are:
 
 - JSON
