@@ -1,6 +1,7 @@
 {
   "name": "eyeglass-sassy-data",
   "author": "Vladimir Jimenez",
+  "description": "Import JSON or YAML into Sass maps",
   "license": "MIT",
   "version": "0.1.3",
   "repository": {
