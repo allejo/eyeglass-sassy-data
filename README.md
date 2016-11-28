@@ -7,6 +7,8 @@ Sassy Data is an [eyeglass](https://github.com/sass-eyeglass/eyeglass) module wh
 - JSON
 - YAML
 
+Thanks to [eyeglass-file-text](https://github.com/strarsis/eyeglass-file-text) for providing the functionality of reading files.
+
 ## Installing
 
 ```

@@ -18,7 +18,8 @@ module.exports = function(eyeglass, sass) {
                         return;
                     }
 
-                    done(sass.types.String(eol.auto(data)));
+                    var fileData = ($encoding.getValue() == 'base64') ? data : eol.auto(data);
+                    done(sass.types.String(fileData));
                 });
             },
             "sd-json-to-map($jsonAsString)": function ($jsonAsString, done) {
