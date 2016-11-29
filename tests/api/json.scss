@@ -1,0 +1,16 @@
+@include test-module('json') {
+    @include test('should return a sass map from a JSON string') {
+        $actual: json-to-map('{"array":[1,2],"string":"string","int":42,"bool":true,"obj":{"key":"value"}}');
+        $expected: (
+            array: (1,2),
+            string: "string",
+            int: 42,
+            bool: true,
+            obj: (
+                key: value
+            )
+        );
+
+        @include assert-equal($actual, $expected);
+    }
+}
