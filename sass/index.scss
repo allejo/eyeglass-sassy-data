@@ -6,7 +6,7 @@ $sd-default-encoding: 'utf8' !default;
 ///
 /// @access public
 ///
-/// @param  {String} $filePath - The path to the file to read; this path is relative to the Sass file this function is called from
+/// @param  {String} $filePath - The path to the file to read; this path is relative to root of your project (where your node_modules/ resides)
 /// @param  {String} $encoding [utf8] - The encoding of the JSON file
 ///
 /// @since  0.1.0
@@ -46,7 +46,7 @@ $sd-default-encoding: 'utf8' !default;
 ///
 /// @access public
 ///
-/// @param  {String} $filePath - The path to the file to read; this path is relative to the Sass file this function is called from
+/// @param  {String} $filePath - The path to the file to read; this path is relative to root of your project (where your node_modules/ resides)
 /// @param  {String} $encoding [utf8] - The encoding of the JSON file
 ///
 /// @since  0.1.0
@@ -60,7 +60,7 @@ $sd-default-encoding: 'utf8' !default;
 ///
 /// @access public
 ///
-/// @param  {String} $filePath - The path to the file to read; this path is relative to the Sass file this function is called from
+/// @param  {String} $filePath - The path to the file to read; this path is relative to root of your project (where your node_modules/ resides)
 /// @param  {String} $encoding [utf8] - The encoding of the JSON file
 ///
 /// @since  0.1.0
