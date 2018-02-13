@@ -9,7 +9,6 @@ module.exports = function(eyeglass, sass) {
     var sassUtils = require('node-sass-utils')(sass);
 
     return {
-        sassDir: path.join(__dirname, 'sass'),
         functions: {
             "sd-read-file($filePath, $encoding: 'utf8')": function ($filePath, $encoding, done) {
                 fs.readFile($filePath.getValue(), $encoding.getValue(), function (err, data) {
