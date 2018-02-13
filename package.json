@@ -1,7 +1,7 @@
 {
   "name": "eyeglass-sassy-data",
   "author": "Vladimir Jimenez",
-  "description": "Import JSON or YAML into Sass maps",
+  "description": "Read JSON or YAML into Sass maps",
   "license": "MIT",
   "version": "0.1.3",
   "repository": {
@@ -20,19 +20,23 @@
   "eyeglass": {
     "name": "sassy-data",
     "exports": "eyeglass-exports.js",
-    "needs": "^1.1.2"
+    "needs": "^1.1.2",
+    "sassDir": "./sass/"
   },
   "dependencies": {
-    "eol": "^0.4.0",
-    "js-yaml": "^3.7.0",
+    "eol": "^0.9.1",
+    "js-yaml": "^3.10.0",
     "node-sass-utils": "^1.1.2"
   },
   "devDependencies": {
-    "eyeglass": "^1.1.2",
+    "eyeglass": "^1.3.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2",
-    "pump": "^1.0.1",
-    "sass-true": "^2.1.3",
-    "sassdoc": "^2.1.20"
+    "gulp-sass": "^3.1.0",
+    "pump": "^3.0.0",
+    "sass-true": "^3.0.0",
+    "sassdoc": "^2.5.0"
+  },
+  "scripts": {
+    "test": "gulp sass:tests"
   }
 }
