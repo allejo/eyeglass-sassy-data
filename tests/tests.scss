@@ -3,5 +3,6 @@
 @import '../sass/index';
 
 @import 'api/json';
+@import 'api/yaml';
 
 @include report();

@@ -13,4 +13,11 @@
 
         @include assert-equal($actual, $expected);
     }
+
+    @include test('should return an empty sass map from an empty JSON string') {
+        $actual: json-to-map('{}');
+        $expected: ();
+
+        @include assert-equal($actual, $expected, null, true);
+    }
 }

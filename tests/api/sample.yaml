@@ -1,0 +1,9 @@
+---
+array:
+- 1
+- 2
+string: string
+int: 42
+bool: true
+obj:
+  key: value

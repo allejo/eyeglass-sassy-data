@@ -1,0 +1,23 @@
+@include test-module('yaml') {
+    @include test('should return a sass map from a YAML string') {
+        $actual: import-yaml('tests/api/sample.yaml');
+        $expected: (
+            array: (1,2),
+            string: "string",
+            int: 42,
+            bool: true,
+            obj: (
+                key: value
+            )
+        );
+
+        @include assert-equal($actual, $expected);
+    }
+
+    @include test('should return an empty sass map from an empty JSON string') {
+        $actual: yaml-to-map('{}');
+        $expected: ();
+
+        @include assert-equal($actual, $expected, null, true);
+    }
+}
