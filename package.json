@@ -37,6 +37,7 @@
     "sassdoc": "^2.5.0"
   },
   "scripts": {
+    "docs": "gulp sass:docs",
     "test": "gulp sass:tests"
   }
 }
